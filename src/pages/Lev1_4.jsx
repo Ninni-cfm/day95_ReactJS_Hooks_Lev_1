@@ -14,7 +14,7 @@ const Lev1_4 = () => {
 
             <h1>Lev1_4: Change-Mood</h1>
 
-            <div className="ChangeMood">
+            <div className="Mood">
                 <div>
                     <Cat size={200} mood={moods[mood]} color="#FDA7DC" />
                 </div>

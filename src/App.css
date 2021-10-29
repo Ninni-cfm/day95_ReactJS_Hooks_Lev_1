@@ -1,3 +1,9 @@
+section {
+    text-align: center;
+    background: #eee;
+    min-height: 100vh;
+}
+
 a {
     text-decoration: none;
     font-size: 1rem;
@@ -15,8 +21,17 @@ a:visited {
 }
 a:hover {
     box-shadow: 0 0 1rem gray;
+    cursor: pointer;
 }
 
+button:hover {
+    cursor: pointer;
+}
+button:active {
+    cursor: grab;
+}
+
+/****************************************************************************/
 nav {
     display: flex;
     justify-content: space-between;
@@ -30,10 +45,7 @@ nav ul {
     gap: 1rem;
 }
 
-section {
-    text-align: center;
-}
-
+/****************************************************************************/
 .Home {
     text-align: center;
 }
@@ -45,4 +57,124 @@ section {
 }
 .Home > div a {
     width: 20rem;
+}
+
+/****************************************************************************/
+.Counter * {
+    font-size: 2rem;
+}
+.Counter {
+    margin: 0 auto;
+    width: 20rem;
+    border: 3px solid #666;
+    padding: 2rem;
+    background: ivory;
+}
+.Counter > div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.Counter > button {
+    width: 100%;
+    margin-top: 2rem;
+}
+.Counter button {
+    background: #fff;
+    transition: 0.5s;
+}
+.Counter button:hover {
+    box-shadow: 0 0 0.25rem gray;
+}
+
+/****************************************************************************/
+.Faq {
+    margin: 0 auto;
+    width: 30rem;
+    border: 3px solid #ccc;
+    padding: 1rem 2rem;
+    background: #333;
+    color: #ddd;
+}
+.FaqQuestion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.FaqQuestion button {
+    display: block;
+    font-size: 1.5rem;
+    width: 2rem;
+}
+.FaqAnswer {
+    border-top: 2px solid #fff;
+    text-align: left;
+}
+
+/****************************************************************************/
+.DayNight * {
+    font-size: 3rem;
+}
+.DayNight {
+    margin: 0 auto;
+    width: 30rem;
+    border: 3px solid #ccc;
+    transition: 0.5s;
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.DayNight > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.DayNight img {
+    margin-left: 1rem;
+    width: 4rem;
+}
+.DayNight button {
+    display: block;
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+}
+
+/****************************************************************************/
+.Mood {
+    background: #845ff0;
+    margin: 0 auto;
+    width: 30rem;
+    border: 3px solid #ccc;
+    transition: 0.5s;
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Mood button {
+    background: #ea4a40;
+    color: #eee;
+    display: block;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    margin-top: 2rem;
+    box-shadow: none;
+    outline: 6px double #aaa;
+    border-radius: 3px;
+    transition: 0.5s;
+}
+.Mood button:active {
+    background: #9ce47e;
+    color: #333;
+}
+
+@keyframes colorChange {
+    from {
+        background: linear-gradient(to right top, #ea4a40 100%, #9ce47e 100%);
+    }
+    to {
+        background: linear-gradient(to right top, #ea4a40 0%, #9ce47e 0% 100%);
+    }
 }

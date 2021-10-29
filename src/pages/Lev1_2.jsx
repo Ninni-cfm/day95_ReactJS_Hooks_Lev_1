@@ -12,14 +12,16 @@ const Lev1_2 = () => {
             <h1>Lev1_2: State - FAQ</h1>
 
             <div className="Faq">
-                <h1>Why is React great?</h1>
-                <button
-                    onClick={() => {
-                        setExpanded(!expanded);
-                    }}
-                >
-                    {expanded ? "-" : "+"}
-                </button>
+                <div className="FaqQuestion">
+                    <h1>Why is React great?</h1>
+                    <button
+                        onClick={() => {
+                            setExpanded(!expanded);
+                        }}
+                    >
+                        {expanded ? "-" : "+"}
+                    </button>
+                </div>
                 <div
                     className="FaqAnswer"
                     style={

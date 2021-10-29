@@ -11,11 +11,11 @@ const Lev1_1 = () => {
 
             <h1>Lev1_1: Counter</h1>
 
-            <div>
+            <div className="Counter">
                 <div>
-                    <button onClick={() => setCount(count - 1)}>-1</button>
+                    <button onClick={() => setCount(count - 1)}>-</button>
                     <span> {count} </span>
-                    <button onClick={() => setCount(count + 1)}>+1</button>
+                    <button onClick={() => setCount(count + 1)}>+</button>
                 </div>
                 <button onClick={() => setCount(0)}>RESET</button>
             </div>

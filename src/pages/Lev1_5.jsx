@@ -24,7 +24,7 @@ const Lev1_5 = () => {
 
             <h1>Lev1_5: Random-Mood</h1>
 
-            <div className="RandomMood">
+            <div className="Mood Random">
                 <div>
                     <Planet size={200} mood={moodState[mood]} color="Yellow" />
                 </div>

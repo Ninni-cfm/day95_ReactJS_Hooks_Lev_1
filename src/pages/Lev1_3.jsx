@@ -10,14 +10,20 @@ const Lev1_3 = () => {
             <NavBar />
             <h1>Lev1_3: Day-Night-Change</h1>
 
-            <div className="DayNight">
-                <h1>
-                    {isNight ? "Es ist Nacht!" : "Es ist Tag!"}
+            <div
+                className="DayNight"
+                style={{
+                    background: isNight ? "#000033" : "lightblue",
+                    color: isNight ? "lightblue" : "#000033",
+                }}
+            >
+                <div>
+                    <h1>{isNight ? "Es ist Nacht!" : "Es ist Tag!"}</h1>
                     <img
                         src={isNight ? "/img/moon-256.png" : "/img/sun-256.png"}
                         alt=""
                     />
-                </h1>
+                </div>
                 <button
                     onClick={() => {
                         setNight(!isNight);
