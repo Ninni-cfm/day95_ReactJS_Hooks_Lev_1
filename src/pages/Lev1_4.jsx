@@ -1,9 +1,12 @@
 import { useState } from "react";
 
+import { Cat } from "react-kawaii";
+
 import NavBar from "../components/NavBar";
 
+let moods = ["happy", "sad"];
 const Lev1_4 = () => {
-    const [happy, setMood] = useState(true);
+    const [mood, setMood] = useState(0);
 
     return (
         <section>
@@ -13,11 +16,11 @@ const Lev1_4 = () => {
 
             <div className="ChangeMood">
                 <div>
-                    <img src="" alt="" />
+                    <Cat size={200} mood={moods[mood]} color="#FDA7DC" />
                 </div>
                 <button
                     onClick={() => {
-                        setMood(!happy);
+                        setMood(1 - mood);
                     }}
                 >
                     Change Mood
